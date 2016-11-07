@@ -41,7 +41,13 @@ $(document).ready(function() {
 			operacion = 6;
 		}*/
 		else if (operador === 'C') {
-			operacion = 7;
+			numero1 = 0;
+			numero2 = 0;
+			num1 = 0;
+			num2 = 0;
+			operacion = 0;
+			pantalla = '';
+			$('#pantalla').text('');
 		}
 		console.log(numero1 + ' ' + operador);
 		$('#pantalla').text('');
@@ -70,15 +76,6 @@ $(document).ready(function() {
 		case 5:
 			result = -numero1;
 			$('#pantalla').text(result);
-			break;
-		case 7:
-			numero1 = 0;
-			numero2 = 0;
-			// num1 = 0;
-			// num2 = 0;
-			operacion = 0;
-			pantalla = '';
-			$('#pantalla').text('');
 			break;
 		}
 	})
