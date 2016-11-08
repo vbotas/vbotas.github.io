@@ -2,7 +2,12 @@ $(document).ready(function() {
 	var pantalla = '';
 	var num1=00;
 	var operacion = 0;
-
+	$('.botonNumero').mouseenter(function() {
+			$(this).css("background", "#757575");
+		});
+		$('.botonNumero').mouseleave(function() {
+			$(this).css("background", "#232223");
+		});
 	$('.botonNumero').click(function(){
 		if (operacion===0) {
 		num1 = parseInt($(this).html());
@@ -18,7 +23,16 @@ $(document).ready(function() {
 		numero2=parseInt(pantalla);
 		console.log('El numero2 es ' + numero2);
 		}
-	})
+	});
+
+
+
+	$('.botonOperador').mouseenter(function() {
+		$(this).css("background", "#757575");
+	});
+	$('.botonOperador').mouseleave(function() {
+		$(this).css("background", "#232223");
+	});
 	$('.botonOperador').click(function() {
 		//console.log(numero1);
 		operador = $(this).html();
@@ -54,7 +68,15 @@ $(document).ready(function() {
 		pantalla = '';
 		//console.log(pantalla);
 		console.log('La operacion es ' + operacion);
-	})
+	});
+
+
+	$('#igual').mouseenter(function() {
+		$(this).css("background", "#757575");
+	});
+	$('#igual').mouseleave(function() {
+		$(this).css("background", "#232223");
+	});
 	$('#igual').click(function() {
 		switch (operacion) {
 			case 1:
@@ -78,6 +100,6 @@ $(document).ready(function() {
 			$('#pantalla').text(result);
 			break;
 		}
-	})
+	});
 
 });
